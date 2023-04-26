@@ -1,0 +1,18 @@
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title>{{perro.nombre}}</mat-card-title>
+    <mat-card-subtitle>{{perro.raza | titlecase}}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src="assets/{{perro.foto}}" alt="">
+  <mat-card-content>
+    <p>
+      {{perro.descripcion}}
+    </p>
+    <p *ngIf="perro.jefe">
+      El dueño de este perro es: {{ perro.jefe }}
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-stroked-button type="button" [routerLink]="['/perro', perro.nombre ]">Ver Perro</button>
+  </mat-card-actions>
+</mat-card>

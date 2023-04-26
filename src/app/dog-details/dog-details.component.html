@@ -1,0 +1,17 @@
+<div *ngIf="this.perro" class="details">
+  <div class="dates-box box-border mb-4">
+    <span class="text-right">Nombre</span>
+    <span>{{perro.nombre}}</span>
+    <span class="text-right">Raza</span>
+    <span>{{perro.raza | titlecase}}</span>
+    <span class="text-right">Dueño</span>
+    <span>{{perro.jefe || 'Es su propio jefe'}}</span>
+  </div>
+  <div class="flex-row">
+    <img mat-card-image src="assets/{{perro.foto}}" alt="">
+    <p class="description">
+      {{perro.descripcion}}
+    </p>
+  </div>
+
+</div>
